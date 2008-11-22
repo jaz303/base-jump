@@ -1,0 +1,3 @@
+[submodule "vendor/base-php"]
+	path = vendor/base-php
+	url = git://github.com/jaz303/base-php.git
