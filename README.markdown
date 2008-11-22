@@ -7,24 +7,24 @@ Trying it out:
 You need to set up an Apache vhost and do some configuration. A quick example
 (substitute {$DOC_ROOT} as appropriate):
 
-  &lt;VirtualHost *:4014&gt;
+    <VirtualHost *:4014>
     
-      DocumentRoot {$DOC_ROOT}/
+        DocumentRoot {$DOC_ROOT}/
     
-      Options +FollowSymLinks
+        Options +FollowSymLinks
     
-      php_value     auto_prepend_file   "{$DOC_ROOT}/_offsite/include/prepend.php"
-      php_value     auto_append_file    "{$DOC_ROOT}/_offsite/include/append.php"
+        php_value     auto_prepend_file   "{$DOC_ROOT}/_offsite/include/prepend.php"
+        php_value     auto_append_file    "{$DOC_ROOT}/_offsite/include/append.php"
     
-      &lt;Directory {$DOC_ROOT}/&gt;
-          Options +Indexes
-          Allow from all
-      &lt;/Directory&gt;
+        <Directory {$DOC_ROOT}/>
+            Options +Indexes
+            Allow from all
+        </Directory>
     
-      &lt;Directory {$DOC_ROOT}/_offsite/&gt;
-          Order deny,allow
-          Deny from all
-      &lt;/Directory&gt;
+        <Directory {$DOC_ROOT}/_offsite/>
+            Order deny,allow
+            Deny from all
+        </Directory>
     
-  &lt;/VirtualHost&gt;
+    </VirtualHost>
 
