@@ -1,5 +1,5 @@
-base-jump is a simple PHP framework extracted from priceyourmeal.com and built
-on the BasePHP library (also hosted on github).
+base-jump is a simple PHP framework extracted from [priceyourmeal.com](http://priceyourmeal.com) and built
+on the [BasePHP](http://github.com/jaz303/base-php/tree/master) library.
 
 Trying it out:
 --------------
