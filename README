@@ -1,8 +1,0 @@
-base-jump is a simple PHP framework extracted from priceyourmeal.com and built
-on the BasePHP library (also hosted on github).
-
-Trying it out:
---------------
-
-You need to set up an Apache vhost and do some configuration:
-
