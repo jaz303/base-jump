@@ -128,4 +128,9 @@ spl_autoload_register('class_map_autoloader');
 env('main');
 
 $TPL = new BaseJump::Template;
+
+//
+// Load per-dir configuration if it exists
+
+if (file_exists('_dir.php')) require '_dir.php';
 ?>
