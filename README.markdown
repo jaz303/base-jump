@@ -45,7 +45,7 @@ Quickstart Guide:
 Open `www/index.php` for editing and enter:
 
     <?php
-    $TPL->name = "enter your name here";
+    $tpl->name = "enter your name here";
     ?>
     
 Now open `www/tpl/index.php` and enter:
@@ -57,13 +57,13 @@ Hit your web root with your browser and you should be greeted.
 Things to note:
 
   * base-jump is short-tag friendly
-  * The template object, $TPL, was automatically instantiated by PHP's auto prepend file
-    (located at www/_offsite/include/prepend.php)
+  * The template object, `$tpl`, was automatically instantiated by PHP's auto prepend file
+    (located at `www/_offsite/include/prepend.php`). `$request` is also available.
   * Fields assigned to the template object are extracted to regular variables in the
     template file
   * We didn't have to explicitly tell the template to render - this was handled by PHP's
-    auto append file (located at www/_offsite/include/append.php)
-  * The whole template is wrapped in a _layout_, found at www/_offsite/tpl/layout/default.php
+    auto append file (located at `www/_offsite/include/append.php`)
+  * The whole template is wrapped in a _layout_, found at `www/_offsite/tpl/layout/default.php`
   
 Next, edit `www/tpl/index.css` and add:
 

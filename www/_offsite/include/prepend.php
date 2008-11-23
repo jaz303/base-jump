@@ -13,10 +13,15 @@ define('LIB_ROOT',              INCLUDE_ROOT . '/lib');
 define('TPL_DIR',               'tpl');
 define('TPL_ROOT',              OFFSITE_ROOT . '/' . TPL_DIR);
 
+define('STATIC_ROOT',           APP_ROOT . '/static');
+define('STATIC_URL',            '/static/');
+
 set_include_path('.:' . LIB_ROOT);
 
 //
 // Core functions
+
+require 'base-jump/common.php';
 
 function env($file) {
     require ENVIRONMENT_ROOT . '/' . APP_ENV . '/' . $file . '.php';
@@ -111,7 +116,7 @@ function class_map_autoloader($class) {
       'Contact_Form_File' => 'base-php/Contact/Form.php',
       'Contact_Mailer' => 'base-php/Contact/Form.php',
       'Contact_CSV' => 'base-php/Contact/Form.php',
-      'BaseJump::Template' => 'base-jump/Template.php',
+      'BaseJump::Template' => 'base-jump/classes/Template.php',
     );
     // END-MAP
 
@@ -121,13 +126,13 @@ function class_map_autoloader($class) {
 
 spl_autoload_register('class_map_autoloader');
 
-
 //
 // Setup environment, globals and other dependencies
 
 env('main');
 
-$TPL = new BaseJump::Template;
+$tpl        = new BaseJump::Template;
+$request    = new HTTP_Request;
 
 //
 // Load per-dir configuration if it exists

@@ -1,5 +1,5 @@
 <?php
-if (!$TPL->performed()) {
-    $TPL->display_page();
+if (!$tpl->performed()) {
+    $tpl->display_page();
 }
 ?>
