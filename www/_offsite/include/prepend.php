@@ -10,6 +10,9 @@ define('ENVIRONMENT_ROOT',      OFFSITE_ROOT . '/environment');
 define('INCLUDE_ROOT',          OFFSITE_ROOT . '/include');
 define('LIB_ROOT',              INCLUDE_ROOT . '/lib');
 
+define('TPL_DIR',               'tpl');
+define('TPL_ROOT',              OFFSITE_ROOT . '/' . TPL_DIR);
+
 set_include_path('.:' . LIB_ROOT);
 
 //
