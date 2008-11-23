@@ -56,6 +56,7 @@ Hit your web root with your browser and you should be greeted.
 
 Things to note:
 
+  * base-jump is short-tag friendly
   * The template object, $TPL, was automatically instantiated by PHP's auto prepend file
     (located at www/_offsite/include/prepend.php)
   * Fields assigned to the template object are extracted to regular variables in the
@@ -95,4 +96,5 @@ framework, but the following parallels could be drawn:
   * __Controller:__ the scripts a user accesses directly via the browser (such as
     `www/index.php` from the quickstart) correspond to single controller actions.
     There is currently no equivalent of controller classes such as those found in
-    Rails.
+    Rails, but if present, base-jump will include a file called `_dir.php` before
+    running any scripts in a directory.
