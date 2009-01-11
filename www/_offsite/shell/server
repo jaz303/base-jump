@@ -1,5 +1,0 @@
-#!/bin/bash
-
-LIGHTY="/opt/local/sbin/lighttpd"
-
-$LIGHTY -D -f _offsite/config/lighty.conf
