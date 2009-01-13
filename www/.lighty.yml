@@ -1,4 +1,0 @@
-dispatcher: "/_dispatch.php"
-php:
-  enabled: true
-  version: 5_3
