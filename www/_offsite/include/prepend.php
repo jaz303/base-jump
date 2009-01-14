@@ -6,6 +6,7 @@ define('APP_ENV',               isset($_SERVER['APP_ENV']) ? $_SERVER['APP_ENV']
 
 define('APP_ROOT',              realpath(dirname(__FILE__) . '/../..'));
 define('OFFSITE_ROOT',          APP_ROOT . '/_offsite');
+define('CONFIG_ROOT',           OFFSITE_ROOT . '/config');
 define('ENVIRONMENT_ROOT',      OFFSITE_ROOT . '/environment');
 define('INCLUDE_ROOT',          OFFSITE_ROOT . '/include');
 define('LIB_ROOT',              INCLUDE_ROOT . '/lib');
@@ -93,6 +94,8 @@ function class_map_autoloader($class) {
       'ISO_Language' => 'base-php/ISO/Language.php',
       'GDB_SQL' => 'base-php/GDB/SQL.php',
       'File_Upload' => 'base-php/File/Upload.php',
+      'Feed' => 'base-php/Feed/Model.php',
+      'Feed_Item' => 'base-php/Feed/Model.php',
       'Error_IllegalArgument' => 'base-php/Error/IllegalArgument.php',
       'Error_IllegalState' => 'base-php/Error/IllegalState.php',
       'Error_IO' => 'base-php/Error/IO.php',
@@ -116,7 +119,8 @@ function class_map_autoloader($class) {
       'Contact_Form_File' => 'base-php/Contact/Form.php',
       'Contact_Mailer' => 'base-php/Contact/Form.php',
       'Contact_CSV' => 'base-php/Contact/Form.php',
-      'BaseJump::Template' => 'base-jump/classes/Template.php',
+      'BaseJump\Template' => 'base-jump/classes/common.php',
+      'BaseJump\Router' => 'base-jump/classes/common.php',
     );
     // END-MAP
 
@@ -131,7 +135,7 @@ spl_autoload_register('class_map_autoloader');
 
 env('main');
 
-$tpl        = new BaseJump::Template;
+$tpl        = new BaseJump\Template;
 $request    = new HTTP_Request;
 
 //

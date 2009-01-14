@@ -4,4 +4,5 @@ php:
   enabled: true
   version: 5_3
   ini:
-    auto_prepend_file: "/Users/jason/dev/projects/active/base-jump/www/_offsite/include/prepend.php"
+    auto_prepend_file: "_offsite/include/prepend.php"
+    auto_append_file: "_offsite/include/append.php"
